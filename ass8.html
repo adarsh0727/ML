@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Meme Slider</title>
+    <style>
+        body {
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .slider-container {
+            width: 80%;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+        .slider {
+            display: inline-flex;
+            transition: transform 0.3s ease-in-out;
+        }
+        .slider img {
+            width: 300px;
+            height: 200px;
+            margin-right: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s, filter 0.3s;
+            cursor: pointer;
+        }
+        .slider img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+        .slider img:active {
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="" alt="World's Funniest Meme">
+            <img src="" alt="Funny Meme 1">
+            <img src="=" alt="Funny Animal Meme 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRq1ZxF9BO4pzpRRhRBOmLIN_kj5yFlU6ZHA&s" alt="Dog Meme">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLg5gfY7_Tb_OGCp7-RZcmBJIX_S6wfpzlEg&s" alt="Funny Animal Meme 3">
+        </div>
+    </div>
+</body>
+</html>
